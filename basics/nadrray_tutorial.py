@@ -1,3 +1,6 @@
+'''
+code snippet from http://mxnet.io/tutorials/python/ndarray.html
+'''
 import mxnet as mx
 import numpy as np
 
@@ -52,14 +55,19 @@ print(c.asnumpy())
 '''
 Indexing and Slicing
 '''
+# indexing
 a = mx.nd.array(np.arange(6).reshape(3, 2))
-print(a.asnumpy())
 print(a.shape)
+print(a.asnumpy())
+print(a[0][1].asnumpy())
+
+# slice
 print(a[1:2].asnumpy())
 
 # slice with particular axis
 d = mx.nd.slice_axis(a, axis=0, begin=1, end=2)
 print(d.asnumpy())
+
 # using another axis
 d = mx.nd.slice_axis(a, axis=1, begin=1, end=2)
 print(d.asnumpy())
@@ -70,8 +78,14 @@ print(d.asnumpy())
 '''
 # reshape
 a = mx.nd.array(np.arange(24))
+print(a.shape)
+print(a.asnumpy())
 b = a.reshape((2, 3, 4))
+print(b.shape)
 print(b.asnumpy())
+b[0][0][2] = -9    # changing value at 0 channel, 0 row, 2 col
+print(b.asnumpy())
+print(a.asnumpy())
 
 # concatenate
 a = mx.nd.ones((2, 3))
@@ -90,6 +104,7 @@ print(c.asnumpy())
 Reduce
 '''
 a = mx.nd.ones((2, 3))
+print(a.asnumpy())
 b = mx.nd.sum(a)
 print(b.asnumpy())
 
@@ -103,6 +118,15 @@ print(c.asnumpy())
 '''
 GPU support
 '''
+a = mx.nd.ones((100, 100))
+b = mx.nd.ones((100, 100), mx.cpu(0))
+c = mx.nd.ones((100, 100), mx.gpu(0))
+print(a)
+print(b)
+print(c)
+
+
+# using a context
 def f():
   a = mx.nd.ones((100, 100))
   b = mx.nd.ones((100, 100))
