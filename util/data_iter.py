@@ -1,8 +1,9 @@
+"""
+https://github.com/dmlc/mxnet-notebooks/blob/master/python/basic/data_iter.py
+"""
+
 import numpy as np
 import mxnet as mx
-'''
-https://github.com/dmlc/mxnet-notebooks/blob/master/python/basic/data_iter.py
-'''
 
 class SimpleBatch(object):
     def __init__(self, data, label, pad=None):

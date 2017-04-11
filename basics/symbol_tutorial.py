@@ -1,3 +1,7 @@
+"""
+code snippet from http://mxnet.io/tutorials/python/symbol.html
+"""
+
 import mxnet as mx
 
 '''

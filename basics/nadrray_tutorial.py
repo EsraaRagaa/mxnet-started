@@ -1,6 +1,7 @@
-'''
+"""
 code snippet from http://mxnet.io/tutorials/python/ndarray.html
-'''
+"""
+
 import mxnet as mx
 import numpy as np
 
