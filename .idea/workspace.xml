@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cbb77794-cb25-47f0-b9e7-18cca0548d22" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basics/nadrray_tutorial.py" afterPath="$PROJECT_DIR$/basics/nadrray_tutorial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basics/symbol_tutorial.py" afterPath="$PROJECT_DIR$/basics/symbol_tutorial.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basics/training_inference_module.py" afterPath="$PROJECT_DIR$/basics/training_inference_module.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/data_iter.py" afterPath="$PROJECT_DIR$/util/data_iter.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,11 +17,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="training_inference_module.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basics/training_inference_module.py">
+      <file leaf-file-name="training_inference_low.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basics/training_inference_low.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="407">
+              <caret line="59" column="19" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="59" selection-end-column="19" />
               <folding>
                 <element signature="e#72#90#0" expanded="true" />
               </folding>
@@ -33,12 +29,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Works/Python/mxnet-cu80/local/lib/python2.7/site-packages/mxnet/model.py">
+      <file leaf-file-name="training_inference_module.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basics/training_inference_module.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="364" column="67" lean-forward="false" selection-start-line="364" selection-start-column="58" selection-end-line="364" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="184">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="13" />
+              <folding>
+                <element signature="e#72#90#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +71,7 @@
       <find>train_data_iter</find>
       <find>viz</find>
       <find>eval</find>
+      <find>batch_size</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,6 +96,7 @@
         <option value="$PROJECT_DIR$/basics/symbol_tutorial.py" />
         <option value="$PROJECT_DIR$/util/data_iter.py" />
         <option value="$PROJECT_DIR$/basics/training_inference_module.py" />
+        <option value="$PROJECT_DIR$/basics/training_inference_low.py" />
       </list>
     </option>
   </component>
@@ -237,10 +237,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/basics" />
       <recent name="$PROJECT_DIR$/demo" />
       <recent name="$PROJECT_DIR$/dataio" />
       <recent name="$PROJECT_DIR$/vision" />
-      <recent name="$PROJECT_DIR$/basics" />
     </key>
   </component>
   <component name="RunManager" selected="Python.training_inference_module">
@@ -544,13 +544,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basics/symbol_tutorial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basics/symbol_tutorial_test.py" />
     <entry file="file://$PROJECT_DIR$/basics/nadrray_tutorial.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -711,21 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basics/mixed_programming.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataio/loading_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1595">
-          <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataio/image_data_io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -805,10 +783,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataio/loading_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2277">
+          <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics/mixed_programming.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/basics/training_inference_module.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="184">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="e#72#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basics/training_inference_low.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="59" column="19" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="59" selection-end-column="19" />
           <folding>
             <element signature="e#72#90#0" expanded="true" />
           </folding>
