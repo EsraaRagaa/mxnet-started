@@ -1,3 +1,7 @@
+"""
+code snippet from http://mxnet.io/tutorials/python/image_io.html
+"""
+
 import mxnet as mx
 
 '''
@@ -9,8 +13,8 @@ There are mainly three ways of loading image data in MXNet:
 [OLD] mx.io.ImageRecordIter: implemented in backend (C++), less customizable but can be used in all language bindings, load from .rec files
 Custom iterator by inheriting mx.io.DataIter
 '''
+# Download datasets
 import os
-import subprocess
 import mxnet as mx
 import numpy as np
 import matplotlib.pyplot as plt
