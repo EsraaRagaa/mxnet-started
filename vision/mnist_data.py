@@ -1,3 +1,7 @@
+"""
+code snippet from http://mxnet.io/tutorials/python/mnist.html
+"""
+
 import numpy as np
 import os
 import urllib

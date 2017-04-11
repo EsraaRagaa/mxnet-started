@@ -1,3 +1,7 @@
+"""
+code snippet from http://mxnet.io/tutorials/computer_vision/image_classification.html
+"""
+
 import mxnet as mx
 import numpy as np
 import matplotlib.pyplot as plt
@@ -61,7 +65,7 @@ import logging
 logging.getLogger().setLevel(logging.DEBUG)
 
 mod = mx.mod.Module(symbol=lenet,
-                    context=mx.cpu(),
+                    context=mx.gpu(),
                     data_names=['data'],
                     label_names=['softmax_label'])
 
