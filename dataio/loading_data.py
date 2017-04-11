@@ -1,15 +1,8 @@
+"""
+code snippet from http://mxnet.io/tutorials/python/data.html
+"""
+
 import mxnet as mx
-
-'''
-Basic Data Iterator
-'''
-# Data Batch
-class SimpleBatch(object):
-  def __init__(self, data, label, pad=0):
-    self.data = data
-    self.label = label
-    self.pad = pad
-
 
 # Symbol and Data Variables
 # In MXNet, an operator (mx.sym.*) has one or more input variables and output variables;
@@ -27,6 +20,17 @@ net = mx.sym.FullyConnected(data=net, name='fc2', num_hidden=num_classes)
 net = mx.sym.SoftmaxOutput(data=net, name='softmax')
 print(net.list_arguments())
 print(net.list_outputs())
+
+'''
+Basic Data Iterator
+'''
+# Data Batch
+class SimpleBatch(object):
+  def __init__(self, data, label, pad=0):
+    self.data = data
+    self.label = label
+    self.pad = pad
+
 
 '''
 Data Iterators
@@ -48,24 +52,18 @@ class SimpleIter:
         self.data_gen = data_gen
         self.label_gen = label_gen
         self.cur_batch = 0
-
     def __iter__(self):
         return self
-
     def reset(self):
         self.cur_batch = 0
-
     def __next__(self):
         return self.next()
-
     @property
     def provide_data(self):
         return self._provide_data
-
     @property
     def provide_label(self):
         return self._provide_label
-
     def next(self):
         if self.cur_batch < self.num_batches:
             self.cur_batch += 1
@@ -90,11 +88,3 @@ data = SimpleIter(['data'], [(n, 100)],
 
 mod = mx.mod.Module(symbol=net)
 mod.fit(data, num_epoch=5)
-
-'''
-More Iterators
-'''
-
-'''
-Implementation
-'''
